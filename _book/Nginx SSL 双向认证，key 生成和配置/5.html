@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Nginx SSL 双向认证，key 生成和配置 · GitBook</title>
+        <title>Nginx配置 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="1.html" />
+    <link rel="next" href="../linux 下修改virtualBox的动态磁盘大小/" />
     
     
-    <link rel="prev" href="../javascript中判断取值/" />
+    <link rel="prev" href="4.html" />
     
 
     </head>
@@ -167,7 +167,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7" data-path="./">
+        <li class="chapter " data-level="1.7" data-path="./">
             
                 <a href="./">
             
@@ -233,7 +233,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.5" data-path="5.html">
+        <li class="chapter active" data-level="1.7.5" data-path="5.html">
             
                 <a href="5.html">
             
@@ -294,7 +294,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Nginx SSL 双向认证，key 生成和配置</a>
+        <a href=".." >Nginx配置</a>
     </h1>
 </div>
 
@@ -309,7 +309,37 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="nginx-ssl-&#x53CC;&#x5411;&#x8BA4;&#x8BC1;&#xFF0C;key-&#x751F;&#x6210;&#x548C;&#x914D;&#x7F6E;">Nginx SSL &#x53CC;&#x5411;&#x8BA4;&#x8BC1;&#xFF0C;key &#x751F;&#x6210;&#x548C;&#x914D;&#x7F6E;</h1>
+                                <h1 id="nginx&#x914D;&#x7F6E;">Nginx&#x914D;&#x7F6E;</h1>
+<blockquote>
+<ul>
+<li>vhosts.xxx.conf &#x5728; server { }&#x6BB5;&#x56FD;&#x5165;&#x5982;&#x4E0B;&#x4EE3;&#x7801;</li>
+</ul>
+</blockquote>
+<pre><code class="lang-bash">     listen       443;
+        server_name  localhost;
+        ssi on;
+        ssi_silent_errors on;
+        ssi_types text/shtml;
+
+        ssl                  on;
+        ssl_certificate      /usr/<span class="hljs-built_in">local</span>/nginx/ca/server/server.crt;
+        ssl_certificate_key  /usr/<span class="hljs-built_in">local</span>/nginx/ca/server/server.key;
+        ssl_client_certificate /usr/<span class="hljs-built_in">local</span>/nginx/ca/private/ca.crt;
+
+        ssl_session_timeout  5m;
+        ssl_verify_client on;  <span class="hljs-comment">#&#x5F00;&#x6237;&#x5BA2;&#x6237;&#x7AEF;&#x8BC1;&#x4E66;&#x9A8C;&#x8BC1;</span>
+
+        ssl_protocols  SSLv2 SSLv3 TLSv1;
+        ssl_ciphers ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;
+        ssl_prefer_server_ciphers   on;
+</code></pre>
+<blockquote>
+<ul>
+<li>&#x91CD;&#x65B0;&#x542F;&#x52A8;Nginx<pre><code class="lang-bash">/etc/init.d/nginx restart
+</code></pre>
+</li>
+</ul>
+</blockquote>
 
                                 
                                 </section>
@@ -337,12 +367,12 @@
 
             
                 
-                <a href="../javascript中判断取值/" class="navigation navigation-prev " aria-label="Previous page: javascript中判断取值">
+                <a href="4.html" class="navigation navigation-prev " aria-label="Previous page: 客户端证书的生成 * 创建存放 key 的目录 users">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="1.html" class="navigation navigation-next " aria-label="Next page: 安装nginx和openSSL">
+                <a href="../linux 下修改virtualBox的动态磁盘大小/" class="navigation navigation-next " aria-label="Next page: linux 下修改virtualBox的动态磁盘大小">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -353,7 +383,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Nginx SSL 双向认证，key 生成和配置","level":"1.7","depth":1,"next":{"title":"安装nginx和openSSL","level":"1.7.1","depth":2,"path":"Nginx SSL 双向认证，key 生成和配置/1.md","ref":"Nginx SSL 双向认证，key 生成和配置/1.md","articles":[]},"previous":{"title":"javascript中判断取值","level":"1.6","depth":1,"path":"javascript中判断取值/README.md","ref":"javascript中判断取值/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Nginx SSL 双向认证，key 生成和配置/README.md","mtime":"2018-05-09T09:11:27.153Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-09T09:50:34.237Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Nginx配置","level":"1.7.5","depth":2,"next":{"title":"linux 下修改virtualBox的动态磁盘大小","level":"1.8","depth":1,"path":"linux 下修改virtualBox的动态磁盘大小/README.md","ref":"linux 下修改virtualBox的动态磁盘大小/README.md","articles":[]},"previous":{"title":"客户端证书的生成 * 创建存放 key 的目录 users","level":"1.7.4","depth":2,"path":"Nginx SSL 双向认证，key 生成和配置/4.md","ref":"Nginx SSL 双向认证，key 生成和配置/4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Nginx SSL 双向认证，key 生成和配置/5.md","mtime":"2018-05-09T09:49:43.975Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-09T09:50:34.237Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
