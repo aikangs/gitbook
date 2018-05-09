@@ -6,7 +6,7 @@
 * [ubuntu下安装docker，一条命令解决](ubuntu下安装docker，一条命令解决/README.md)
 * [golang vendor包管理使用记录](golang vendor包管理使用记录/README.md)
 * [javascript中判断取值](javascript中判断取值/README.md)
-* [Nginx SSL 双向认证，key 生成和配置](Nginx SSL 双向认证，key 生成和配置/README.md)
+* [Nginx SSL 双向认证，key 生成和配置](Nginx SSL 双向认证，key 生成和配置/1.md)
     * [安装nginx和openSSL](Nginx SSL 双向认证，key 生成和配置/1.md)
     * [SSL 服务器 / 客户端双向验证证书的生成](Nginx SSL 双向认证，key 生成和配置/2.md)
     * [服务器证书的生成](Nginx SSL 双向认证，key 生成和配置/3.md)
