@@ -1,0 +1,36 @@
+{
+  "author": "song kang <aiakngs@gmail.com>",
+  "description": "aikangs的博客",
+  "extension": null,
+  "generator": "site",
+  "isbn": "",
+  "links": {
+    "sharing": {
+      "all": null,
+      "facebook": null,
+      "google": null,
+      "twitter": null,
+      "weibo": null
+    },
+    "sidebar": {
+      "aikangs Blog": "http://www.mynow.net"
+    }
+  },
+  "output": null,
+  "pdf": {
+    "fontSize": 12,
+    "footerTemplate": null,
+    "headerTemplate": null,
+    "margin": {
+      "bottom": 36,
+      "left": 62,
+      "right": 62,
+      "top": 36
+    },
+    "pageNumbers": false,
+    "paperSize": "a4"
+  },
+  "plugins": [],
+  "title": "aikangs的博客",
+  "variables": {}
+}
