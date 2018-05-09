@@ -1,0 +1,7 @@
+# golang vendor包管理使用记录
+```bash
+glide init # 初始化
+glide install #安装依赖
+glide up #更新依赖
+```
+
