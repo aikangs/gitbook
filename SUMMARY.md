@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+* [gitbook使用记录](gitbook使用记录/README.md)
 * [ubuntu下golang的交叉编译](ubuntu下golang的交叉编译/readme.md)
 * [ubuntu18.04下安装Deepin Scrot](ubuntu18.04下安装Deepin-Scrot/readme.md)
 * [ubuntu下安装docker，一条命令解决](ubuntu下安装docker，一条命令解决/README.md)

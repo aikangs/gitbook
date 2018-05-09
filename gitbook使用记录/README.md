@@ -1,0 +1,38 @@
+# gitbook使用记录
+> * 安装
+```bash
+ npm install gitbook -g
+ ```
+ 需要注意的是：用户首先需要安装nodejs，以便能够使用npm来安装gitbook。
+
+## gitbook初始化
+
+> * 建立目录以及基本文件
+```bash
+   mkdir gitbook
+   gitbook/
+   ├── README.md
+   └── SUMMARY.md
+```
+README.md和SUMMARY.md是两个必须的文件，README.md是对书籍的简单介绍：
+```bash
+cat README.md
+# Introduction
+```
+SUMMARY.md是书籍的目录结构。内容如下：
+```bash
+# Summary
+
+* [Introduction](README.md)
+* [gitbook使用记录](gitbook使用记录/README.md)
+* [Nginx SSL 双向认证，key 生成和配置](Nginx SSL 双向认证，key 生成和配置/README.md)
+    * [安装nginx和openSSL](Nginx SSL 双向认证，key 生成和配置/1.md)
+    * [SSL 服务器 / 客户端双向验证证书的生成](Nginx SSL 双向认证，key 生成和配置/2.md)
+```
+创建了这两个文件后，使用gitbook init，它会为我们创建SUMMARY.md中的目录结构。
+
+> * 编译成html形式
+```bash
+gitbook build
+```
+该命令会在gitbook/目录下创建_book/目录
