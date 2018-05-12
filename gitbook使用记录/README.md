@@ -20,16 +20,14 @@ cat README.md
 # Introduction
 ```
 SUMMARY.md是书籍的目录结构。内容如下：
-```bash
 # Summary
-
 * [Introduction](README.md)
 * [gitbook使用记录](gitbook使用记录/README.md)
 * [Nginx SSL 双向认证，key 生成和配置](Nginx SSL 双向认证，key 生成和配置/README.md)
     * [安装nginx和openSSL](Nginx SSL 双向认证，key 生成和配置/1.md)
     * [SSL 服务器 / 客户端双向验证证书的生成](Nginx SSL 双向认证，key 生成和配置/2.md)
-```
 创建了这两个文件后，使用gitbook init，它会为我们创建SUMMARY.md中的目录结构。
+
 
 > * 编译成html形式
 ```bash
