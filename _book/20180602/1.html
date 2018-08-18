@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>ubuntu下安装docker，一条命令解决 · aikangs的博客</title>
+        <title>在MySQL字段中使用逗号分隔符 · aikangs的博客</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../golang vendor包管理使用记录/" />
+    <link rel="next" href="../emoji表情的储存与搜索/" />
     
     
-    <link rel="prev" href="../ubuntu18.04下安装Deepin-Scrot/readme.html" />
+    <link rel="prev" href="../frp/1.html" />
     
 
     </head>
@@ -124,9 +124,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../20180602/1.html">
+        <li class="chapter active" data-level="1.3" data-path="1.html">
             
-                <a href="../20180602/1.html">
+                <a href="1.html">
             
                     
                     在MySQL字段中使用逗号分隔符
@@ -189,9 +189,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8" data-path="./">
+        <li class="chapter " data-level="1.8" data-path="../ubuntu下安装docker，一条命令解决/">
             
-                <a href="./">
+                <a href="../ubuntu下安装docker，一条命令解决/">
             
                     
                     ubuntu下安装docker，一条命令解决
@@ -355,7 +355,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >ubuntu下安装docker，一条命令解决</a>
+        <a href=".." >在MySQL字段中使用逗号分隔符</a>
     </h1>
 </div>
 
@@ -370,8 +370,19 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="ubuntu&#x4E0B;&#x5B89;&#x88C5;docker&#xFF0C;&#x4E00;&#x6761;&#x547D;&#x4EE4;&#x89E3;&#x51B3;">ubuntu&#x4E0B;&#x5B89;&#x88C5;docker&#xFF0C;&#x4E00;&#x6761;&#x547D;&#x4EE4;&#x89E3;&#x51B3;</h1>
-<pre><code class="lang-bash">curl <span class="hljs-_">-s</span> https://get.docker.io | sudo sh
+                                <h1 id="&#x5728;mysql&#x5B57;&#x6BB5;&#x4E2D;&#x4F7F;&#x7528;&#x9017;&#x53F7;&#x5206;&#x9694;&#x7B26;">&#x5728;MySQL&#x5B57;&#x6BB5;&#x4E2D;&#x4F7F;&#x7528;&#x9017;&#x53F7;&#x5206;&#x9694;&#x7B26;</h1>
+<pre><code class="lang-sql">    mysql&gt; SELECT * FROM content;
++----+------+
+| id | tags |
++----+------+
+|  1 | 1,2  |
+|  2 | 2,3  |
++----+------+
+2 rows in set (0.01 sec)
+</code></pre>
+<p>&#x4E0D;&#x9700;&#x8981;&#x4F7F;&#x7528;like&#x6765;&#x67E5;&#x8BE2;</p>
+<pre><code class="lang-sql">
+<span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> <span class="hljs-keyword">content</span> <span class="hljs-keyword">WHERE</span> FIND_IN_SET(<span class="hljs-string">&apos;2&apos;</span>, tags) <span class="hljs-keyword">AND</span> <span class="hljs-keyword">id</span> &lt;&gt; <span class="hljs-number">1</span>
 </code></pre>
 
                                 
@@ -400,12 +411,12 @@
 
             
                 
-                <a href="../ubuntu18.04下安装Deepin-Scrot/readme.html" class="navigation navigation-prev " aria-label="Previous page: ubuntu18.04下安装Deepin Scrot">
+                <a href="../frp/1.html" class="navigation navigation-prev " aria-label="Previous page: frp使用记录">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../golang vendor包管理使用记录/" class="navigation navigation-next " aria-label="Next page: golang vendor包管理使用记录">
+                <a href="../emoji表情的储存与搜索/" class="navigation navigation-next " aria-label="Next page: emoji表情的储存与搜索">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -416,7 +427,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ubuntu下安装docker，一条命令解决","level":"1.8","depth":1,"next":{"title":"golang vendor包管理使用记录","level":"1.9","depth":1,"path":"golang vendor包管理使用记录/README.md","ref":"golang vendor包管理使用记录/README.md","articles":[]},"previous":{"title":"ubuntu18.04下安装Deepin Scrot","level":"1.7","depth":1,"path":"ubuntu18.04下安装Deepin-Scrot/readme.md","ref":"ubuntu18.04下安装Deepin-Scrot/readme.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"song kang <aiakngs@gmail.com>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"aikangs的博客","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"aikangs Blog":"http://www.mynow.net"}},"gitbook":"*","description":"aikangs的博客","extension":null},"file":{"path":"ubuntu下安装docker，一条命令解决/README.md","mtime":"2018-05-09T09:21:41.609Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-18T09:11:33.189Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"在MySQL字段中使用逗号分隔符","level":"1.3","depth":1,"next":{"title":"emoji表情的储存与搜索","level":"1.4","depth":1,"path":"emoji表情的储存与搜索/README.md","ref":"emoji表情的储存与搜索/README.md","articles":[]},"previous":{"title":"frp使用记录","level":"1.2","depth":1,"path":"frp/1.md","ref":"frp/1.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"song kang <aiakngs@gmail.com>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"aikangs的博客","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"aikangs Blog":"http://www.mynow.net"}},"gitbook":"*","description":"aikangs的博客","extension":null},"file":{"path":"20180602/1.md","mtime":"2018-06-02T07:54:04.250Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-18T09:11:33.189Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
